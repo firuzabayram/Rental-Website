@@ -1,0 +1,395 @@
+@import "_variables";
+@import "buttons";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+body {
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        width: 100%;
+        height: 100vh;
+    }
+    #nav {
+        display: none;
+    }
+    &.show {
+        .backdrop {
+            display: block;
+        }
+        #nav {
+            display: block;
+        }
+    }
+    .container {
+        width: 100%;
+        max-width: 980px;
+        margin: 0 auto;
+        border-right: 1px solid #ccc;
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $white;
+            background: $dark;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 52px;
+            z-index: 1;
+
+            .logo,
+            .menu {
+                font-size: 24px;
+                padding: 8px 16px;
+            }
+        }
+        .nav {
+            display: none;
+            width: 260px;
+            position: fixed;
+            z-index: 3;
+            background: $bg-color;
+            border-left: 1px solid #ccc;
+            height: 100vh;
+            overflow-y: scroll;
+
+            .form-section {
+                padding: 16px;
+                .close-icon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 8px 16px;
+                    font-size: 15px;
+                }
+                h3 {
+                    margin: 1rem 0;
+                    font-size: 24px;
+                }
+                h6 {
+                    font-size: 16px;
+                    padding-bottom: 2rem;
+                }
+                #rental-form {
+                    p {
+                        margin: 1.2rem 0;
+                    }
+                    input {
+                        width: 100%;
+                        padding: 9px;
+                        outline: none;
+                        border: none;
+                        border: 1px solid #ccc;
+                        font-size: inherit;
+                    }
+                    .search-btn {
+                        @extend .main-btn;
+                        display: block;
+                        text-align: left;
+                        margin: 1rem 0;
+                        .fa-search {
+                            margin-right: 16px;
+                        }
+                    }
+                }
+            }
+            .navbar {
+                ul li {
+                    a {
+                        color: $dark;
+                        display: block;
+                        padding: 16px;
+                        &:hover {
+                            background: #ccc;
+                        }
+                    }
+                }
+            }
+        }
+
+        #apartment {
+            .slider {
+                padding: 80px 16px 8px;
+                h2 {
+                    color: $green;
+                    font-size: 30px;
+                    font-weight: 400;
+                    margin: 1rem 0;
+                }
+                .slides {
+                    .main-img-container {
+                        position: relative;
+                        #main-img {
+                            width: 100%;
+                        }
+                        #img-info {
+                            position: absolute;
+                            bottom: 12px;
+                            left: 0;
+                            padding: 16px;
+                            color: $white;
+                            background: $dark;
+                            font-size: 15px;
+                        }
+                    }
+
+                    #sub-imgs {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 8px;
+                        div {
+                            opacity: 0.6;
+                            margin: 0 8px;
+                            &.opacity {
+                                opacity: 1;
+                            }
+                            img {
+                                width: 100%;
+                                cursor: pointer;
+                            }
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                            &:hover {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #content {
+            padding: 8px 16px;
+
+            .content-title {
+                font-weight: 700;
+                font-size: 20px;
+                margin: 10px 0;
+            }
+            .row {
+                display: flex;
+                .col {
+                    width: 50%;
+                    p {
+                        margin: 18px 0;
+                        font-size: 18px;
+                    }
+                }
+            }
+            hr {
+                border: 0;
+                border-top: 1px solid #eee;
+                margin: 20px 0;
+            }
+            p {
+                margin: 15px 0;
+                font-size: 15px;
+                line-height: 1.5;
+                i {
+                    font-size: 18px;
+                }
+            }
+            .subscribe-btn {
+                @extend .main-btn;
+            }
+        }
+        #subscribe-modal {
+            padding: 12px 0;
+            display: none;
+            position: fixed;
+            z-index: 4;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: $dark;
+            background-color: rgba(0, 0, 0, 0.4);
+
+            @keyframes modal {
+                0% {
+                    transform: scale(0);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+            .content {
+                background-color: #fefefe;
+                margin: 0 10px;
+                padding: 16px 40px;
+                border: 1px solid #888;
+                text-align: center;
+                position: relative;
+                animation: modal 0.6s;
+
+                .modal-close-icon {
+                    position: absolute;
+                    font-size: 24px;
+                    top: 18px;
+                    right: 20px;
+                    cursor: pointer;
+                }
+                .title {
+                    font-size: 30px;
+                    letter-spacing: 4px;
+                    margin-top: 8px;
+                }
+                .description {
+                    font-size: 15px;
+                    line-height: 1.5;
+                    margin: 15px 0;
+                }
+                #subscribe-email-input {
+                    width: 100%;
+                    padding: 10px;
+                    outline: none;
+                    border: none;
+                    border: 1px solid #ccc;
+                    font-size: inherit;
+                }
+                .subscribe-btn {
+                    @extend .main-btn;
+                    width: 118px;
+                    margin: 16px 0 10px;
+                    padding: 14px 24px;
+                }
+            }
+        }
+
+        #contact {
+            padding: 8px 16px;
+            .contact-title {
+                font-size: 30px;
+                margin-bottom: 10px;
+            }
+            .contact-info {
+                margin: 15px 0;
+                p {
+                    margin: 7px 0;
+                }
+            }
+            p {
+                font-size: 15px;
+            }
+            #contact-form {
+                margin-top: 10px;
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    outline: none;
+                    border: none;
+                    border: 1px solid #ccc;
+                    font-size: inherit;
+                    margin: 0.5rem 0;
+                }
+                .error {
+                    margin: 0;
+                }
+                .send-message-btn {
+                    @extend .main-btn;
+                    margin-top: 10px;
+                }
+            }
+        }
+        #footer {
+            padding: 8px 16px;
+            margin-top: 32px;
+            margin-bottom: 10px;
+            p {
+                font-size: 15px;
+                .w3-link {
+                    text-decoration: underline;
+                    color: $dark;
+                }
+            }
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        @media (min-width: 600px) {
+            #content {
+                .subscribe-btn {
+                    width: 33.33%;
+                }
+            }
+            #subscribe-modal {
+                .content {
+                    width: 500px;
+                    margin: 0 auto;
+                    .modal-close-icon {
+                        right: 50px;
+                    }
+                }
+            }
+            #contact {
+                #contact-form {
+                    .send-message-btn {
+                        width: 33.33%;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            #subscribe-modal {
+                padding-top: 100px;
+                .content {
+                    width: 600px;
+                }
+            }
+        }
+
+        @media (min-width: 992px) {
+            .backdrop {
+                display: none;
+            }
+            #header {
+                display: none;
+            }
+            #nav {
+                display: block;
+                .close-icon {
+                    display: none;
+                }
+            }
+            #apartment {
+                margin-left: 260px;
+                .slider {
+                    padding-top: 8px;
+                }
+            }
+            #subscribe-modal {
+                .content {
+                    width: 900px;
+                }
+            }
+            #content,
+            #contact,
+            #footer {
+                margin-left: 260px;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "variables";
+
+.main-btn {
+    color: $white;
+    background-color: $green;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        color: $dark;
+        background: #ccc;
+    }
+}

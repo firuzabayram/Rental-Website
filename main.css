@@ -1,0 +1,369 @@
+.main-btn, body .container #contact #contact-form .send-message-btn, body .container #subscribe-modal .content .subscribe-btn, body .container #content .subscribe-btn, body .container .nav .form-section #rental-form .search-btn {
+    color: #fff;
+    background-color: #4caf50;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  .main-btn:hover, body .container #contact #contact-form .send-message-btn:hover, body .container #subscribe-modal .content .subscribe-btn:hover, body .container #content .subscribe-btn:hover, body .container .nav .form-section #rental-form .search-btn:hover {
+    color: #000;
+    background: #ccc;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+  }
+  
+  body .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    width: 100%;
+    height: 100vh;
+  }
+  body #nav {
+    display: none;
+  }
+  body.show .backdrop {
+    display: block;
+  }
+  body.show #nav {
+    display: block;
+  }
+  body .container {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    border-right: 1px solid #ccc;
+  }
+  body .container #header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52px;
+    z-index: 1;
+  }
+  body .container #header .logo,
+  body .container #header .menu {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+  body .container .nav {
+    display: none;
+    width: 260px;
+    position: fixed;
+    z-index: 3;
+    background: #f1f1f1;
+    border-left: 1px solid #ccc;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+  body .container .nav .form-section {
+    padding: 16px;
+  }
+  body .container .nav .form-section .close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 16px;
+    font-size: 15px;
+  }
+  body .container .nav .form-section h3 {
+    margin: 1rem 0;
+    font-size: 24px;
+  }
+  body .container .nav .form-section h6 {
+    font-size: 16px;
+    padding-bottom: 2rem;
+  }
+  body .container .nav .form-section #rental-form p {
+    margin: 1.2rem 0;
+  }
+  body .container .nav .form-section #rental-form input {
+    width: 100%;
+    padding: 9px;
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    font-size: inherit;
+  }
+  body .container .nav .form-section #rental-form .search-btn {
+    display: block;
+    text-align: left;
+    margin: 1rem 0;
+  }
+  body .container .nav .form-section #rental-form .search-btn .fa-search {
+    margin-right: 16px;
+  }
+  body .container .nav .navbar ul li a {
+    color: #000;
+    display: block;
+    padding: 16px;
+  }
+  body .container .nav .navbar ul li a:hover {
+    background: #ccc;
+  }
+  body .container #apartment .slider {
+    padding: 80px 16px 8px;
+  }
+  body .container #apartment .slider h2 {
+    color: #4caf50;
+    font-size: 30px;
+    font-weight: 400;
+    margin: 1rem 0;
+  }
+  body .container #apartment .slider .slides .main-img-container {
+    position: relative;
+  }
+  body .container #apartment .slider .slides .main-img-container #main-img {
+    width: 100%;
+  }
+  body .container #apartment .slider .slides .main-img-container #img-info {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+    padding: 16px;
+    color: #fff;
+    background: #000;
+    font-size: 15px;
+  }
+  body .container #apartment .slider .slides #sub-imgs {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+  }
+  body .container #apartment .slider .slides #sub-imgs div {
+    opacity: 0.6;
+    margin: 0 8px;
+  }
+  body .container #apartment .slider .slides #sub-imgs div.opacity {
+    opacity: 1;
+  }
+  body .container #apartment .slider .slides #sub-imgs div img {
+    width: 100%;
+    cursor: pointer;
+  }
+  body .container #apartment .slider .slides #sub-imgs div:first-child {
+    margin-left: 0;
+  }
+  body .container #apartment .slider .slides #sub-imgs div:last-child {
+    margin-right: 0;
+  }
+  body .container #apartment .slider .slides #sub-imgs div:hover {
+    opacity: 1;
+  }
+  body .container #content {
+    padding: 8px 16px;
+  }
+  body .container #content .content-title {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  body .container #content .row {
+    display: flex;
+  }
+  body .container #content .row .col {
+    width: 50%;
+  }
+  body .container #content .row .col p {
+    margin: 18px 0;
+    font-size: 18px;
+  }
+  body .container #content hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+  }
+  body .container #content p {
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  body .container #content p i {
+    font-size: 18px;
+  }
+  body .container #subscribe-modal {
+    padding: 12px 0;
+    display: none;
+    position: fixed;
+    z-index: 4;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  @keyframes modal {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  body .container #subscribe-modal .content {
+    background-color: #fefefe;
+    margin: 0 10px;
+    padding: 16px 40px;
+    border: 1px solid #888;
+    text-align: center;
+    position: relative;
+    animation: modal 0.6s;
+  }
+  body .container #subscribe-modal .content .modal-close-icon {
+    position: absolute;
+    font-size: 24px;
+    top: 18px;
+    right: 20px;
+    cursor: pointer;
+  }
+  body .container #subscribe-modal .content .title {
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-top: 8px;
+  }
+  body .container #subscribe-modal .content .description {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 15px 0;
+  }
+  body .container #subscribe-modal .content #subscribe-email-input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    font-size: inherit;
+  }
+  body .container #subscribe-modal .content .subscribe-btn {
+    width: 118px;
+    margin: 16px 0 10px;
+    padding: 14px 24px;
+  }
+  body .container #contact {
+    padding: 8px 16px;
+  }
+  body .container #contact .contact-title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  body .container #contact .contact-info {
+    margin: 15px 0;
+  }
+  body .container #contact .contact-info p {
+    margin: 7px 0;
+  }
+  body .container #contact p {
+    font-size: 15px;
+  }
+  body .container #contact #contact-form {
+    margin-top: 10px;
+  }
+  body .container #contact #contact-form input {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border: 1px solid #ccc;
+    font-size: inherit;
+    margin: 0.5rem 0;
+  }
+  body .container #contact #contact-form .error {
+    margin: 0;
+  }
+  body .container #contact #contact-form .send-message-btn {
+    margin-top: 10px;
+  }
+  body .container #footer {
+    padding: 8px 16px;
+    margin-top: 32px;
+    margin-bottom: 10px;
+  }
+  body .container #footer p {
+    font-size: 15px;
+  }
+  body .container #footer p .w3-link {
+    text-decoration: underline;
+    color: #000;
+  }
+  body .container .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: 500;
+  }
+  @media (min-width: 600px) {
+    body .container #content .subscribe-btn {
+      width: 33.33%;
+    }
+    body .container #subscribe-modal .content {
+      width: 500px;
+      margin: 0 auto;
+    }
+    body .container #subscribe-modal .content .modal-close-icon {
+      right: 50px;
+    }
+    body .container #contact #contact-form .send-message-btn {
+      width: 33.33%;
+    }
+  }
+  @media (min-width: 768px) {
+    body .container #subscribe-modal {
+      padding-top: 100px;
+    }
+    body .container #subscribe-modal .content {
+      width: 600px;
+    }
+  }
+  @media (min-width: 992px) {
+    body .container .backdrop {
+      display: none;
+    }
+    body .container #header {
+      display: none;
+    }
+    body .container #nav {
+      display: block;
+    }
+    body .container #nav .close-icon {
+      display: none;
+    }
+    body .container #apartment {
+      margin-left: 260px;
+    }
+    body .container #apartment .slider {
+      padding-top: 8px;
+    }
+    body .container #subscribe-modal .content {
+      width: 900px;
+    }
+    body .container #content,
+  body .container #contact,
+  body .container #footer {
+      margin-left: 260px;
+    }
+  }
+  
+  /*# sourceMappingURL=main.css.map */
+  
